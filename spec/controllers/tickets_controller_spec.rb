@@ -7,4 +7,11 @@ RSpec.describe TicketsController, type: :controller do
       expect(response).to be_successful
     end
   end
+
+  describe '#new' do
+    it 'should respond successfully' do
+      get :new
+      expect(response).to be_successful
+    end
+  end
 end

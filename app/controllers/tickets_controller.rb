@@ -5,6 +5,9 @@ class TicketsController < ApplicationController
   def index
   end
 
+  def new
+  end
+
   private
 
   def set_tickets
