@@ -12,6 +12,13 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
+# Front-end:
+gem 'jquery-rails'
+gem 'tether-rails'
+gem 'autoprefixer-rails'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'font-awesome-rails'
+
 # Testing:
 gem 'simplecov', require: false, group: :test
 gem 'rspec-rails', '~> 3.5', group: [:test, :development]
