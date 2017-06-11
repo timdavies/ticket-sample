@@ -3,12 +3,15 @@ class TicketsController < ApplicationController
   before_action :set_tickets, only: :index
   before_action :set_orders,  only: %i[new create]
 
+  # GET /tickets
   def index; end
 
+  # GET /tickets/new
   def new
     @ticket = Ticket.new
   end
 
+  # POST /tickets
   def create
     @ticket = Ticket.create(ticket_params)
     return render :new unless @ticket.persisted?
