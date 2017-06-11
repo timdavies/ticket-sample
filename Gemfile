@@ -23,6 +23,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'database_cleaner'
   gem 'rails-controller-testing'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
 end
 
 group :development, :test do
