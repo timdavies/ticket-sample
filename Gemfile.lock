@@ -6,6 +6,12 @@ GIT
     shoulda-matchers (3.1.2)
       activesupport (>= 4.0.0)
 
+GIT
+  remote: https://github.com/timdavies/flashes.git
+  revision: 30de3ac97e6c4ccab8acc2860510591dbf3694c8
+  specs:
+    flashes (1.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -226,6 +232,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13.0)
   database_cleaner
+  flashes!
   font-awesome-rails
   jquery-rails
   listen (>= 3.0.5, < 3.2)
