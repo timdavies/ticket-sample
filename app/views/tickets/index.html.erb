@@ -14,6 +14,8 @@
   <div class="list-group">
     <%= render partial: 'ticket', collection: @tickets %>
   </div>
+
+  <%= will_paginate @tickets %>
 <% else %>
   <div class="empty">
     <%= t('.empty') %>

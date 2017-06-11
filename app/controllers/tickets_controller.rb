@@ -25,7 +25,7 @@ class TicketsController < ApplicationController
   end
 
   def set_tickets
-    @tickets = Ticket.all
+    @tickets = Ticket.paginate(page: params[:page])
   end
 
   def set_orders
