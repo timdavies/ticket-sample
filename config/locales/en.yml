@@ -1,7 +1,38 @@
 en:
+  flashes:
+    ticket_created: Support ticket has been created! We'll be in touch soon.
+
   tickets:
+    problems:
+      order_did_not_arrive: Order did not arrive
+      order_incorrect: My order is wrong
+      tights_broke: My tights broke
+
+    resolutions:
+      replacement: Please send me a replacement
+      different_item: Please send me a different item
+      refund: Please refund my order
+
     index:
       title: Your Tickets
       empty: No support tickets open.
       empty_link: Create a new ticket now?
       new: New Ticket
+
+    ticket:
+      title: 'Ticket #%{id}'
+      updated_at: 'Last updated %{when} ago'
+
+    new:
+      title: New Support Ticket
+
+      errors:
+        title: The following errors were found with your submission
+
+      form:
+        prompt: Please select
+        email: Email address
+        order: 'Please select the order you are having trouble with:'
+        problem: 'Problem with your order:'
+        resolution: 'Preferred resolution to your problem:'
+        submit: Create Ticket

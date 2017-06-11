@@ -1,9 +1,9 @@
-<%= link_to ticket_path(ticket), class: 'list-group-item clearfix' do %>
+<div class="list-group-item clearfix">
   <div>
-    Ticket 1
+    <%= t('.title', id: ticket.id) %>
   </div>
 
   <div class="ml-auto">
-    Opened 2 days ago
+    <%= t('.updated_at', when: time_ago_in_words(ticket.updated_at)) %>
   </div>
-<% end %>
+</div>

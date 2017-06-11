@@ -1,24 +1,22 @@
-<div class="container">
-  <div class="d-flex">
-    <h1><%= t('.title') %></h1>
+<div class="d-flex">
+  <h1><%= t('.title') %></h1>
 
-    <div class="ml-auto">
-      <%= link_to(
-        t('.new'),
-        new_ticket_path,
-        class: 'btn btn-primary'
-      ) %>
-    </div>
+  <div class="ml-auto">
+    <%= link_to(
+      t('.new'),
+      new_ticket_path,
+      class: 'btn btn-primary'
+    ) %>
   </div>
-
-  <% if @tickets.any? %>
-    <div class="list-group">
-      <%= render partial: 'ticket', collection: @tickets %>
-    </div>
-  <% else %>
-    <div class="empty">
-      <%= t('.empty') %>
-      <%= link_to t('.empty_link'), new_ticket_path %>
-    </div>
-  <% end %>
 </div>
+
+<% if @tickets.any? %>
+  <div class="list-group">
+    <%= render partial: 'ticket', collection: @tickets %>
+  </div>
+<% else %>
+  <div class="empty">
+    <%= t('.empty') %>
+    <%= link_to t('.empty_link'), new_ticket_path %>
+  </div>
+<% end %>

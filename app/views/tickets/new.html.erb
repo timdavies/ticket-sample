@@ -1,0 +1,67 @@
+<h1>
+  <%= t('.title') %>
+</h1>
+
+<% if @ticket.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <p>
+      <strong><%= t('.errors.title') %></strong>:
+    </p>
+
+    <ul>
+      <% @ticket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for(@ticket) do |f| %>
+  <div class="field-group">
+    <%= f.label :email, t('.form.email') %>
+    <%= f.email_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="field-group">
+    <%= f.label :order_id, t('.form.order') %>
+
+    <%= f.collection_select(
+      :order_id,
+      @orders,
+      :id, :title,
+      { prompt: t('.form.prompt') },
+      class: 'form-control'
+    ) %>
+  </div>
+
+  <div class="field-group">
+    <%= f.label :problem, t('.form.problem') %>
+
+    <%= f.select(
+      :problem,
+      translated_options_from_enum(Ticket::PROBLEMS, 'tickets.problems'),
+      { prompt: t('.form.prompt') },
+      class: 'form-control'
+    ) %>
+  </div>
+
+  <div class="field-group">
+    <%= f.label :resolution, t('.form.resolution') %>
+
+    <%= f.select(
+      :resolution,
+      translated_options_from_enum(Ticket::RESOLUTIONS, 'tickets.resolutions'),
+      { prompt: t('.form.prompt') },
+      class: 'form-control'
+    ) %>
+  </div>
+
+  <div class="field-group">
+    <%= f.label :comments, t('.form.comments') %>
+    <%= f.text_area :comments, class: 'form-control', rows: 5 %>
+  </div>
+
+  <div class="field-group">
+    <%= f.submit t('.form.submit'), class: 'btn btn-primary' %>
+  </div>
+<% end %>
