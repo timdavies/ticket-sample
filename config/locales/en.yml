@@ -34,5 +34,6 @@ en:
         email: Email address
         order: 'Please select the order you are having trouble with:'
         problem: 'Problem with your order:'
+        optional: optional
         resolution: 'Preferred resolution to your problem:'
         submit: Create Ticket

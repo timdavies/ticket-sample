@@ -16,10 +16,10 @@
   </div>
 <% end %>
 
-<%= form_for(@ticket) do |f| %>
+<%= form_for(@ticket, html: { class: 'validate' }) do |f| %>
   <div class="field-group">
     <%= f.label :email, t('.form.email') %>
-    <%= f.email_field :email, class: 'form-control' %>
+    <%= f.email_field :email, class: 'form-control', required: true %>
   </div>
 
   <div class="field-group">
@@ -30,7 +30,8 @@
       @orders,
       :id, :title,
       { prompt: t('.form.prompt') },
-      class: 'form-control'
+      class: 'form-control',
+      required: true
     ) %>
   </div>
 
@@ -41,7 +42,8 @@
       :problem,
       translated_options_from_enum(Ticket::PROBLEMS, 'tickets.problems'),
       { prompt: t('.form.prompt') },
-      class: 'form-control'
+      class: 'form-control',
+      required: true
     ) %>
   </div>
 
@@ -52,12 +54,17 @@
       :resolution,
       translated_options_from_enum(Ticket::RESOLUTIONS, 'tickets.resolutions'),
       { prompt: t('.form.prompt') },
-      class: 'form-control'
+      class: 'form-control',
+      required: true
     ) %>
   </div>
 
   <div class="field-group">
-    <%= f.label :comments, t('.form.comments') %>
+    <%= f.label :comments do %>
+      <%= t('.form.comments') %>
+      <small>(<%= t('.form.optional') %>)</small>
+    <% end %>
+
     <%= f.text_area :comments, class: 'form-control', rows: 5 %>
   </div>
 

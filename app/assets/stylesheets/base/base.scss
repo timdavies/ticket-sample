@@ -10,3 +10,10 @@
 .field-group {
   margin-bottom: 20px;
 }
+
+.validate {
+  label.error {
+    color: red;
+    font-size: .8rem;
+  }
+}

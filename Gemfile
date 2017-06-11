@@ -18,6 +18,7 @@ gem 'tether-rails'
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'font-awesome-rails'
+gem 'jquery-validation-rails'
 gem 'flashes', github: 'timdavies/flashes'
 
 group :test do
