@@ -35,5 +35,6 @@ en:
         order: 'Please select the order you are having trouble with:'
         problem: 'Problem with your order:'
         optional: optional
+        comments: Extra information or comments
         resolution: 'Preferred resolution to your problem:'
         submit: Create Ticket
