@@ -17,7 +17,7 @@ class Ticket < ApplicationRecord
   enum problem: PROBLEMS
   enum resolution: RESOLUTIONS
 
-  belongs_to :order
+  belongs_to :order, inverse_of: :tickets
 
   validates :email,      presence: true
   validates :problem,    presence: true

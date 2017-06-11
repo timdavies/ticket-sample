@@ -1,0 +1,22 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  Exclude:
+    - Gemfile
+    - Rakefile
+    - bin/**
+    - config/**/*
+    - db/**/*
+
+Metrics/LineLength:
+  Exclude:
+    - "spec/**/*"
+
+Metrics/ModuleLength:
+  Exclude:
+    - "spec/**/*"
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"

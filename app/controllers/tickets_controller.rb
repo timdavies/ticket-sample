@@ -1,7 +1,7 @@
 # Handles creation of support tickets.
 class TicketsController < ApplicationController
   before_action :set_tickets, only: :index
-  before_action :set_orders,  only: %i(new create)
+  before_action :set_orders,  only: %i[new create]
 
   def index; end
 
