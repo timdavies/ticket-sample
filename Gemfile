@@ -19,19 +19,24 @@ gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'font-awesome-rails'
 
-# Testing:
-gem 'simplecov', require: false, group: :test
-gem 'rspec-rails', '~> 3.5', group: [:test, :development]
+group :test do
+  gem 'simplecov', require: false
+  gem 'database_cleaner'
+  gem 'rails-controller-testing'
+end
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13.0'
+  gem 'rspec-rails', '~> 3.5'
   gem 'selenium-webdriver'
 end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'rubocop'
+  gem 'rb-readline'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
